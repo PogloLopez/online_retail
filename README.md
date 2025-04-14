@@ -1,76 +1,85 @@
-# Online Retail Data Analysis
+# 🛒 Online Retail
 
-## Project Overview
-This project explores an **online retail transactions dataset**, focusing on **data cleaning, exploratory data analysis (EDA), and deriving business insights**. The dataset contains information about customer purchases, including invoice details, product descriptions, quantities, prices, and customer IDs.
+## 📌 Project Overview
 
-## Current Status
-🚧 **Work in Progress** 🚧  
-This project is still under development. Key steps such as data cleaning, handling missing values, and outlier detection are being implemented before moving into analysis and visualization.
+This project delivers a complete **Exploratory Data Analysis (EDA)** of a real-world e-commerce dataset. It focuses on identifying actionable insights related to **sales performance**, **customer behavior**, and **product returns**, offering a data-driven foundation for strategic business decisions.
 
-## Objectives
-- **Data Cleaning**: Handle missing values, duplicates, and inconsistencies.
-- **Exploratory Data Analysis (EDA)**: Understand customer behavior, sales trends, and product performance.
-- **Business Insights**: Extract meaningful insights to support decision-making.
+The dataset contains transactional data from an online retail store, with details like invoice numbers, product descriptions, quantities, prices, customer IDs, and countries of purchase.
 
-## Dataset
-- **Source**: Public dataset from an **online retail store**.
-- **Size**: ~540K rows, 8 columns.
-- **Key Columns**:
-  - `InvoiceNo`: Transaction ID
-  - `StockCode`: Product identifier
-  - `Description`: Product name
-  - `Quantity`: Number of units purchased
-  - `InvoiceDate`: Date of purchase
-  - `UnitPrice`: Price per unit
-  - `CustomerID`: Unique identifier for customers
-  - `Country`: Country of purchase
+---
 
-## Current Progress
-### ✅ Data Cleaning Steps Implemented
-- **Handled missing values** in `Description` and `CustomerID`.
-- **Converted categorical variables** to appropriate data types.
-- **Cleaned text data** (trimmed spaces, standardized casing, etc.).
-- **Identified and removed duplicates** while preserving meaningful transaction data.
-- **Handled negative values and outliers** in `Quantity` and `UnitPrice`.
+## 📁 Project Structure
 
-### 🔜 Next Steps
-- Conduct exploratory data analysis (EDA) to uncover patterns and trends.
-- Create **visualizations** to enhance data interpretation.
-- Build a **dashboard or report** for insights presentation.
-- Apply **statistical or machine learning models** for deeper analysis (optional).
+- `source/` – Raw dataset.
+- `online_retail.ipynb` – Full EDA notebook.
+- `README.md` – Project overview and conclusions.
+- `requirements.txt` – Required libraries.
 
-## Technologies Used
+---
+
+## 🧹 Data Preparation
+
+Before analysis, several preprocessing steps were applied:
+- Handled missing values in `CustomerID` and `Description`.
+- Converted columns to appropriate data types.
+- Removed duplicates and inconsistent values.
+- Addressed invalid or negative entries in `Quantity` and `UnitPrice`.
+- Classified transactions as **Sale**, **Return**, or **Special Case** based on invoice patterns and quantity signs.
+
+---
+
+## 📊 Key Sections
+
+### 1. **Sales Performance Overview**
+- The **United Kingdom** dominates in both revenue and volume.
+- The product **REGENCY CAKESTAND 3 TIER** generated the most revenue; **PAPER CRAFT, LITTLE BIRDIE** had the highest sales volume.
+- **Average Order Value (AOV)**: \$478.26
+- A small number of high-value customers are responsible for a large portion of revenue, highlighting opportunities for retention strategies.
+
+### 2. **Customer Behavior and RFM Analysis**
+- Customers were segmented using **Recency**, **Frequency**, and **Monetary** (RFM) metrics.
+- High RFM scores revealed loyal and valuable customers for personalized engagement.
+- Behavioral patterns were visualized through RFM segmentation and distribution plots.
+
+### 3. **Product Return Analysis**
+- Return rate per country was calculated **as a proportion of total sales**, allowing fair comparisons across different sales volumes.
+- The **UK**, while having the highest return volume, showed a return rate of **~9.3%**, which is moderate given its sales size.
+- Several top-selling products like **PAPER CRAFT, LITTLE BIRDIE** and **MEDIUM CERAMIC TOP STORAGE JAR** had **return rates exceeding 90%**, indicating potential product issues or misalignment with customer expectations.
+
+---
+
+## 🧠 Insights & Recommendations
+
+- **Customer segmentation** offers a strong foundation for targeted marketing and improving customer lifetime value.
+- **Return-prone products** should be reviewed for quality assurance or better product communication.
+- The business should consider **return rate reduction strategies** to improve margins without compromising sales.
+- High-performing countries like the UK remain crucial, while others such as the **Netherlands**, **Eire**, and **Germany** offer growth potential with relatively low return rates.
+
+---
+
+## 🧰 Technologies Used
+
 - **Python**
-- **Pandas** for data manipulation
-- **Matplotlib & Seaborn** for visualization (planned)
-- **Jupyter Notebook** for analysis
+- **Pandas, NumPy** – Data manipulation
+- **Matplotlib, Seaborn** – Visualization
+- **Jupyter Notebook** – Analysis environment
 
-## How to Run
+---
+
+## ▶️ How to Run
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/online-retail-analysis.git
    cd online-retail-analysis
    ```
+
 2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
-3. Open and run the Jupyter Notebook:
+
+3. Launch the notebook:
    ```bash
    jupyter notebook
    ```
-
-## Future Enhancements
-- Customer segmentation analysis.
-- Predictive modeling for sales trends.
-- Interactive dashboards using Power BI or Tableau.
-
-## Contributing
-Since this is a personal portfolio project, contributions are not expected at the moment. However, feedback and suggestions are always welcome!
-
-## License
-This project is for educational purposes and is **not** intended for commercial use.
-
----
-Stay tuned for updates! 🚀
-
